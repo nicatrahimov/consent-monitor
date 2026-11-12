@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consent Monitor"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="This app stores notification text and network connection metadata on this device and can send it to a Telegram chat you control. Android will show notification-access, VPN, and foreground-service indicators. HTTPS content is never decrypted."
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
+
+        <CheckBox
+            android:id="@+id/consentCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="I own/administer this device and all affected users have given informed consent." />
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Status"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/notificationAccessButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Open notification access settings" />
+
+        <Button
+            android:id="@+id/vpnButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start traffic monitoring VPN" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Telegram delivery"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/telegramSettingsGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/botTokenEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="password"
+                android:hint="Bot token"
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/chatIdEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Chat ID (for example, 123456789 or -100...)"
+                android:inputType="text"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/detectChatButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detect latest Telegram chat ID" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/retentionDaysEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Retention days"
+            android:inputType="number"
+            android:singleLine="true" />
+
+        <CheckBox
+            android:id="@+id/unmeteredOnlyCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload only on unmetered networks" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save encrypted settings" />
+
+        <Button
+            android:id="@+id/sendNowButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send pending logs now" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Limits: the VPN records TCP connections, UDP flows, destination IPs and ports, and conventional DNS queries. Domains are attached when DNS makes them observable. HTTPS and QUIC paths, headers, and bodies remain encrypted; one encrypted connection may carry many web requests. WorkManager targets a four-hour interval but Android may defer a run for battery/network reasons."
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+
+    </LinearLayout>
+</ScrollView>

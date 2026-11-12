@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Consent Monitor</string>
+    <string name="notification_listener_label">Consent Monitor notification access</string>
+    <string name="monitoring_channel_name">Network monitoring</string>
+    <string name="monitoring_notification_title">Network metadata monitoring is active</string>
+    <string name="monitoring_notification_text">Tap to review settings; use Stop to disconnect the VPN.</string>
+    <string name="stop">Stop</string>
+</resources>
